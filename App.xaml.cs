@@ -11,7 +11,17 @@ namespace MauiApp1
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            // 1. Cria a janela baseada no seu AppShell
+            var window = new Window(new AppShell());
+
+            // 2. Define as dimensões da janela
+            window.Width = 350;
+            window.Height = 600;
+
+            // 3. Retorna a janela configurada
+            return window;
         }
+
     }
+    
 }
